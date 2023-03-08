@@ -71,9 +71,7 @@ main {
   background-color: #fff;
   float: right;
   width: 80%;
-  /*box-sizing: border-box;*/
   padding: 20px 0 20px 20px;
-  /*margin-right: 20px;*/
 }
 
 .menu-grid {
@@ -83,17 +81,6 @@ main {
 }
 
 .menu-item {
-  /*box-sizing: border-box;*/
-  /*float: left;*/
-  /*margin-top: 10px;*/
-  /*padding: 50px;*/
-  /*width: 100%;*/
-  /*height: 300px;*/
-  /*padding-bottom: 3.8em;*/
-  /*margin-bottom: 3.8em;*/
-  /*border: none;*/
-  /*border-bottom: 1px solid #e9e9e9;*/
-  /*box-sizing: border-box;*/
   display: inline-block;
   width: calc(100% /4);
   flex-direction: column;
@@ -220,7 +207,7 @@ main {
 }
 
 
-/*filtering widget*/
+/*----------- filtering widget  -------------*/
 
 .filtering-widget {
   position: relative;
@@ -244,8 +231,8 @@ main {
 
 .options-container {
   position: absolute;
-  top: 100%;
-  left: 0;
+  top: -70%;
+  left: 100%;
   z-index: 1;
   display: none;
   padding: 10px;
