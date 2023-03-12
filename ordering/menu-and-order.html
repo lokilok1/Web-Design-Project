@@ -18,26 +18,42 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
   <link rel="stylesheet" href="../styles/common.css">
   <link href="https://fonts.cdnfonts.com/css/nexa-bold" rel="stylesheet"/>
-  <link rel="stylesheet" type="text/css" href="../styles/menu-and-order.css" />
-
-  <!--  jQuery to inject header & footer  -->
   <script
-          src="https://code.jquery.com/jquery-3.3.1.js"
-          integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+          src="https://code.jquery.com/jquery-3.6.4.js"
+          integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
           crossorigin="anonymous"></script>
+  <!--  jQuery to inject header & footer  -->
   <script>
     $(function(){
       $("#header").load("../common/header.html");
       $("#footer").load("../common/footer.html");
     });
   </script>
+  <script defer src="../scripts/menu-and-order.js"></script>
+
+
+  <link rel="stylesheet" type="text/css" href="../styles/menu-and-order.css" />
 </head>
 
 <body>
-<!--------------------- header and nav------------------- -->
-<header id="header" class="section1"></header>
+
+<header id="header"></header>
+
 <main class="section2">
+
+  <aside class="secondary">
+    <div id="tabs" class="category">
+      <div class="tab" data-tab="tab-1">Pizzas</div>
+      <div class="tab" data-tab="tab-2">Pastas</div>
+      <div class="tab" data-tab="tab-3">Sides</div>
+      <div class="tab" data-tab="tab-4">Salads</div>
+      <div class="tab" data-tab="tab-5">Drinks</div>
+    </div>
+  </aside>
+
   <section class="primary">
+
+
     <!--------------------- filtering widget--------------------->
 
     <div class="filtering-widget">
@@ -297,40 +313,11 @@
     </div>
   </section>
 
-  <aside class="secondary">
-    <div id="tabs" class="category">
-      <div class="tab" data-tab="tab-1">Pizzas</div>
-      <div class="tab" data-tab="tab-2">Pastas</div>
-      <div class="tab" data-tab="tab-3">Sides</div>
-      <div class="tab" data-tab="tab-4">Salads</div>
-      <div class="tab" data-tab="tab-5">Drinks</div>
-    </div>
-  </aside>
+
 </main>
 <footer id="footer"></footer>
 </body>
 
 <script>
-    // script for tab function
-  const tabs = document.querySelectorAll(".tab");
-  const tabContents = document.querySelectorAll(".tab-content");
-  tabs.forEach((tab) => {
-    tab.addEventListener("click", () => {
-      const tabId = tab.dataset.tab;
-      tabContents.forEach((tabContent) => {
-        tabContent.classList.remove("active");
-      });
-      document.querySelector(`#${tabId}`).classList.add("active");
-    });
-  });
-
-  // Filtering widget expansion toggle
-  const link = document.querySelector('.widget-link');
-  const container = document.querySelector('.options-container');
-
-  link.addEventListener('click', (event) => {
-    event.preventDefault();
-    container.classList.toggle('expanded');
-  });
 </script>
 </html>
